@@ -1,0 +1,11 @@
+# Directorios
+
+/keycloak
+/postgrsql
+/redis_data
+/npm
+
+
+# Archivos
+.env
+
