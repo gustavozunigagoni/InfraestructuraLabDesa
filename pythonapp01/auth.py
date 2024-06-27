@@ -62,8 +62,7 @@ def is_token_expired(token):
     decoded_token = decode_token(token)
     if not decoded_token:
         return True
-    expiration_time = datetime.utcfromtimestamp(decoded_token['exp'])
-    return expiration_time < datetime.utcnow()
+    return decoded_token['exp'] < datetime.now().timestamp()
 
 def get_logout(refresh_token):
     logout_url = F"{KEYCLOAK_BASE_URL}/realms/{KEYCLOAK_REALM}/protocol/openid-connect/logout"

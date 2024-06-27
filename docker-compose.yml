@@ -106,6 +106,7 @@ services:
     volumes:
       - ./keycloak/certs/fullchain.pem:/opt/bitnami/keycloak/certs/fullchain.pem
       - ./keycloak/certs/privkey.pem:/opt/bitnami/keycloak/certs/privkey.pem
+      - /Users/gustavo/Desktop/MISCARPETAS/MISDESARROLLOS/docker/InfraestructuraLabDesa/theme/gzgkeycloak:/opt/bitnami/keycloak/themes/gzgkeycloak
     depends_on:
       - postgresdb
     ports:
